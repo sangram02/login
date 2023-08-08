@@ -1,5 +1,6 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://sangramkumar:Virat18@cluster0.w4depya.mongodb.net/registers?retryWrites=true&w=majority").then(()=>{
+mongoose.connect(process.env.MONGODB_URL).then(()=>{
     console.log(`connection succesful`);
 }).catch((e)=>{
     console.log(`no connection`);
