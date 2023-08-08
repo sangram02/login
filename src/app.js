@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const path = require("path");
 const app = express();
 const hbs = require("hbs");
+
 
 require("./db/conn")
 const Register = require("./models/registers")
